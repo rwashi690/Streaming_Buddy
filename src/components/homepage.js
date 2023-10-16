@@ -69,7 +69,7 @@ const Home = () => {
                 (movieData) => {
                     setIsLoaded(true);
                     setCurrentMoviesBoth(movieData);
-                    console.log(movieData)
+                    console.log(movieData[0])
                 },
                 (error) => {
                     setIsLoaded(true);
@@ -95,7 +95,7 @@ const Home = () => {
                 </div>
             </div>
             <div class="container text-center">
-                <h1>Current Trending Movies</h1>
+                <h1>Current Movies Trending Online</h1>
                 <div class="row">
                     {currentTrendingTen.map(movie => <div class="col" key={movie.id}>
                         <img src={'https://image.tmdb.org/t/p/w500' + movie.poster_path} class="rounded mx-auto d-block" width="100"></img>
@@ -110,6 +110,28 @@ const Home = () => {
                     {currentMoviesBoth.map(movie => <div class="col" key={movie.id}>
                         <img src={'https://image.tmdb.org/t/p/w500' + movie.poster_path} class="rounded mx-auto d-block" width="100"></img>
                         {movie.title}
+                    </div>
+                    )}
+                </div>
+            </div>
+            <div class="container text-center">
+                <h1>Past Popular Movies</h1>
+                <div class="row">
+                    {pastTopTen.map(movie => <div class="col">
+                        <img src={'https://image.tmdb.org/t/p/w500' + movie[3]} class="rounded mx-auto d-block" width="100"></img>
+                        {movie[1]}
+                    </div>
+                    )}
+                </div>
+            </div>
+
+
+            <div class="container text-center">
+                <h1>Past Trending Movies</h1>
+                <div class="row">
+                    {pastTrendingTen.map(movie => <div class="col">
+                        <img src={'https://image.tmdb.org/t/p/w500' + movie[3]} class="rounded mx-auto d-block" width="100"></img>
+                        {movie[1]}
                     </div>
                     )}
                 </div>
