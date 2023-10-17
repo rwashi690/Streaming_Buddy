@@ -11,7 +11,7 @@ const Home = () => {
     const [error, setError] = useState(null);
 
     useEffect (() => {
-        fetch("/getAllPastMovies")
+        fetch("https://streamingbuddy-da-a8acfc1ef30f.herokuapp.com/getAllPastMovies")
             .then(res => res.json())
             .then(
                 (pastMovieData) => {
@@ -24,7 +24,7 @@ const Home = () => {
                     setError(error);
                 }
             )
-        fetch("/getAllPastTrendingMovies")
+        fetch("https://streamingbuddy-da-a8acfc1ef30f.herokuapp.com/getAllPastTrendingMovies")
             .then(res => res.json())
             .then(
                 (pastTrendingData) => {
@@ -37,7 +37,7 @@ const Home = () => {
                     setError(error);
                 }
             )
-        fetch("/topTenTrendingMoviesNow")
+        fetch("https://streamingbuddy-da-a8acfc1ef30f.herokuapp.com/topTenTrendingMoviesNow")
             .then(res => res.json())
             .then(
                 (trendingData) => {
@@ -50,7 +50,7 @@ const Home = () => {
                     setError(error);
                 }
             )
-        fetch("/topTenMoviesNow")
+        fetch("https://streamingbuddy-da-a8acfc1ef30f.herokuapp.com/topTenMoviesNow")
             .then(res => res.json())
             .then(
                 (movieData) => {
@@ -63,7 +63,7 @@ const Home = () => {
                     setError(error);
                 }
             )
-        fetch("/MoviesInTrendingAndPopular")
+        fetch("https://streamingbuddy-da-a8acfc1ef30f.herokuapp.com/MoviesInTrendingAndPopular")
             .then(res => res.json())
             .then(
                 (movieData) => {
